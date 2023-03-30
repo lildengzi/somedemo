@@ -1,0 +1,9 @@
+﻿  LibraryManagementSystem.cpp
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(189,10): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int”
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(189,10): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 1 冲突
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(276,10): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int”
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(276,10): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 1 冲突
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(400,25): warning C4477: “scanf”: 格式字符串“%lld”需要类型“__int64 *”的参数，但可变参数 1 拥有了类型“int *”
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(400,25): message : 请考虑在格式字符串中使用“%d”
+D:\Repo\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem.cpp(400,25): message : 请考虑在格式字符串中使用“%I32d”
+  LibraryManagementSystem.vcxproj -> D:\Repo\LibraryManagementSystem\x64\Debug\LibraryManagementSystem.exe

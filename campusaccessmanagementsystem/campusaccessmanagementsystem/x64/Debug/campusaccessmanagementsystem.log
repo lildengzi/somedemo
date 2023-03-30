@@ -1,0 +1,5 @@
+﻿  campusaccessmagamentsystem.cpp
+D:\Repo\campusaccessmanagementsystem\campusaccessmanagementsystem\campusaccessmagamentsystem.cpp(14,23): warning C4129: “i”: 不可识别的字符转义序列
+D:\Repo\campusaccessmanagementsystem\campusaccessmanagementsystem\campusaccessmagamentsystem.cpp(154,23): warning C4129: “i”: 不可识别的字符转义序列
+D:\Repo\campusaccessmanagementsystem\campusaccessmanagementsystem\campusaccessmagamentsystem.cpp(665): warning C4715: “quitMenus”: 不是所有的控件路径都返回值
+  campusaccessmanagementsystem.vcxproj -> D:\Repo\campusaccessmanagementsystem\x64\Debug\campusaccessmanagementsystem.exe
