@@ -1,12 +1,15 @@
 /**
  * @file main.cpp
- * @name 高精度计算器
+ * @name 高精度计算器(精度一万位)
  * @author lil_DengZi
- * @version v0.1beta
- * @date 2023/04/05
+ * @version v1.0
+ * @date 2023/04/06
  * @todo 完善加减高精度加减法（从网上搜索）
  * @include highcalculator.hpp highnumber.hpp
+ * @brief 好难,yee~
+ * 
  * @copyright    Copyright (c) 2023 lil_DengZi
+ * 
 */
 
 // === Region: Headers ===
@@ -18,42 +21,28 @@
 #include <string>
 using namespace std;
 
-// void HELP()
-// {
-//     cout << "0.退出" << endl;
-//     cout << "1.计算" << endl;
-// }
-
-// void calculate()
-// {
-//     while(
-//         []{
-//             cout << "继续计算?" << endl;
-//             char a;
-//             cin >> a;
-//             if (a == 'Y' || a == 'y')
-//             {
-//                 return true;
-//             }
-//             else
-//             {
-//                 return false;
-//             }
-//         }
-//     )
-//     {
-        
-//     }
-// }
-
-
 // === Region: Main Function ===
 /**
- * @code
+ * @code {example 1}
  * input:123 321 +
- * output:0x61b0ec
- * 这是一个错误情况
+ * output:444
  * @endcode
+ * 
+ * @code {example 2}
+ * input:999 111 +
+ * output:1110
+ * @endcode
+ * 
+ * @code {example 3}
+ * input: 12345 2346 -
+ * output:9999
+ * @endcode
+ * 
+ * @code {example 4}
+ * input:12345 12346 -
+ * output:-1
+ * @endcode
+ * 
  */
 int main(int argc, char* argv[])
 {

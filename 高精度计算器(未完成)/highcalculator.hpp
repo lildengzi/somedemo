@@ -12,15 +12,15 @@
 
 /** === Region: class HighCalculator ===
  * @class HighCalculator
- * @param number_1 type:HighNumber description:the first number.
- * @param number_2 type:HighNumber description:the second number.
- * @param oper type:char description:the operator.
- * @param calculateAnswer type:HighNumber the output.
+ * @param number_1 HighNumber 第一个大数.
+ * @param number_2 HighNumber 第二个大数.
+ * @param oper char 运算符.
+ * @param calculateAnswer HighNumber 计算结果.
 */
 class HighCalculator
 {
 private:
-    HighNumber number_1;
+    HighNumber number_1;///< 大数
     HighNumber number_2;
     HighNumber calculateAnswer;
     char oper;
@@ -50,7 +50,7 @@ HighNumber HighCalculator::getAnswer()
     }
     else if (this->oper == '-')
     {
-        // calculateAnswer = this->sub();
+        // this->calculateAnswer = this->sub();
     }
 
     return calculateAnswer;
@@ -63,8 +63,7 @@ HighNumber HighCalculator::add()
 
 // HighNumber HighCalculator::sub()
 // {
-//     // return number_1 - number_2;
-//     return null;
+//     return number_1 - number_2;
 // }
 
 #endif // _HIGHCALCULATOR_HPP
