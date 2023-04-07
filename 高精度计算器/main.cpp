@@ -28,25 +28,8 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
-    // usInt selection = 0;
-    
-    // while (1)
-    // {
-        // HELP();
-        // cout << "请输入一个数字(0,1):";
-        // cin >> selection;
-        // switch (selection)
-        // {
-        // case 0:
-        //     exit(0);
-        // case 1:
-        //     calculate();
-        //     break;
-        // default:
-        //     cout << "你的输入有问题，请重新输入。" << endl;
-        //     break;
-        // }
-
+    while(1)
+    {
         string num_1, num_2;
         char option;
 
@@ -56,8 +39,9 @@ int main(int argc, char* argv[])
 
         HighCalculator h1(num_1, num_2, option);
         cout << h1.getAnswer() << endl;
-    // }
+        system("pause");
+        system("cls");
+    }
 
-    system("pause");
     return 0;
 }
