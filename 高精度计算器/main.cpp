@@ -1,12 +1,12 @@
 /**
  * @file main.cpp
- * @name é«˜ç²¾åº¦è®¡ç®—å™¨(ç²¾åº¦ä¸€ä¸‡ä½)
+ * @name ¸ß¾«¶È¼ÆËãÆ÷(¾«¶ÈÒ»ÍòÎ»)
  * @author lil_DengZi
- * @version v1.0
- * @date 2023/04/06
- * @todo å®Œå–„åŠ å‡é«˜ç²¾åº¦åŠ å‡æ³•ï¼ˆä»ç½‘ä¸Šæœç´¢ï¼‰
+ * @version v2.0
+ * @date 2023/04/07
+ * @todo ÍêÉÆ¼Ó¼õ¸ß¾«¶È¼õ·¨
  * @include highcalculator.hpp highnumber.hpp
- * @brief å¥½éš¾,yee~
+ * @brief ºÃÄÑ,yee~
  * 
  * @copyright    Copyright (c) 2023 lil_DengZi
  * 
@@ -23,25 +23,7 @@ using namespace std;
 
 // === Region: Main Function ===
 /**
- * @code {example 1}
- * input:123 321 +
- * output:444
- * @endcode
- * 
- * @code {example 2}
- * input:999 111 +
- * output:1110
- * @endcode
- * 
- * @code {example 3}
- * input: 12345 2346 -
- * output:9999
- * @endcode
- * 
- * @code {example 4}
- * input:12345 12346 -
- * output:-1
- * @endcode
+ * @warning ²»Ö§³ÖÊäÈë¸ºÊı¼ÆËã
  * 
  */
 int main(int argc, char* argv[])
@@ -51,7 +33,7 @@ int main(int argc, char* argv[])
     // while (1)
     // {
         // HELP();
-        // cout << "è¯·è¾“å…¥ä¸€ä¸ªæ•°å­—(0,1):";
+        // cout << "ÇëÊäÈëÒ»¸öÊı×Ö(0,1):";
         // cin >> selection;
         // switch (selection)
         // {
@@ -61,15 +43,15 @@ int main(int argc, char* argv[])
         //     calculate();
         //     break;
         // default:
-        //     cout << "ä½ çš„è¾“å…¥æœ‰é—®é¢˜ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚" << endl;
+        //     cout << "ÄãµÄÊäÈëÓĞÎÊÌâ£¬ÇëÖØĞÂÊäÈë¡£" << endl;
         //     break;
         // }
 
         string num_1, num_2;
         char option;
 
-        // cout << "è¾“å…¥ä½ çš„è®¡ç®—è¡¨è¾¾å¼" << endl;
-        // cout << "(æç¤º,è®¡ç®—è¡¨è¾¾å¼: calculate æ•°å­—1 ç¬¦å· æ•°å­—2)" << endl;
+        cout << "ÊäÈëÄãµÄ¼ÆËã±í´ïÊ½" << endl;
+        cout << "(ÌáÊ¾,¼ÆËã±í´ïÊ½: calculate Êı×Ö1 ·ûºÅ Êı×Ö2)" << endl;
         cin >> num_1 >> num_2 >> option;
 
         HighCalculator h1(num_1, num_2, option);

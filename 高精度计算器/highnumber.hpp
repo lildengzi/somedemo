@@ -1,5 +1,5 @@
 // === Region: Headers ===
-// iostream,string,algorithm are included.
+// iostream,string,algorithm and cmath are included.
 // Do not include extra header files
 // =======================
 #pragma once
@@ -37,10 +37,18 @@ private:
     std::string number;
     short big[MAX_LENGTH]={0};
     usInt count;
-    bool FU_SHU;
+    bool FU_SHU = false;
 public:
     HighNumber();
     ~HighNumber();
+
+    bool numCmp(const HighNumber &HN1, const HighNumber &HN2) const
+    {
+        if (HN2.count > HN1.count) return true;
+        for(int i = HN1.count; i >= 0; i--)
+            {if(HN2.big[i] != HN1.big[i]) return (HN2.big[i] > HN1.big[i]);}
+            return false;
+    }
 
     HighNumber& operator=(const std::string &str)
     {
@@ -57,7 +65,10 @@ public:
     HighNumber operator+(HighNumber &num)
     {
         HighNumber answer;
-        for(int i = 0; (i < num.count) || (i < this->count); i++)
+
+        int max = num.count > this->count ? num.count : this->count;
+
+        for(int i = 0; i < max; i++)
         {
             answer.big[i] += this->big[i] + num.big[i];
             if (answer.big[i] >= 10)
@@ -66,40 +77,35 @@ public:
                 answer.big[i + 1] += 1;
             }
         }
-        int max = num.count > this->count ? num.count : this->count;
         answer.count = answer.big[max] != 0 ? max + 1 : max;
         return answer;
     }
 
-    // HighNumber operator-(HighNumber &num)
-    // {
-    //     HighNumber answer;
+    HighNumber operator-(HighNumber &num)
+    {
+        HighNumber answer;
+        int max = num.count > this->count ? num.count : this->count;
 
-    //     if ((num.count > this->count) && (num.big[num.count] > this->big[this->count]))
-    //     {
-    //         HighNumber temp = num;
-    //         num = *this;
-    //         *this = temp;
-    //         answer.FU_SHU = true;
-    //     }
-        
-    //     for(int i = 0; (i < num.count) || (i < this->count); i++)
-    //     {
-    //         answer.big[i] += this->big[i] - num.big[i];
-    //         if (answer.big[i] < 0)
-    //         {
-    //             answer.big[i + 1] -= 1;
-    //         }
-    //     }
+        if(numCmp(*this, num))
+        {
+            HighNumber temp = num;
+            num = *this;
+            *this = temp;
+            answer.FU_SHU = true;
+        }
 
-    //     int max = num.count > this->count ? num.count : this->count;
-    //     answer.count = answer.big[max] == 0 ? max - 1 : max;
-
-    //     if (answer.FU_SHU == true)
-    //         {std::cout << '-';}
-        
-    //     return answer;
-    // }
+        for(int i = 0; i < max; i++)
+        {
+            answer.big[i] += this->big[i] - num.big[i];
+            if (answer.big[i] < 0)
+            {
+                answer.big[i] += 10;
+                answer.big[i + 1] -= 1;
+            }
+        }
+        answer.count = answer.big[max] != 0 ? max + 1 : max;
+        return answer;
+    }
 };
 
 HighNumber::HighNumber(): count(0)
@@ -114,9 +120,18 @@ HighNumber::~HighNumber()
 
 std::ostream& operator<<(std::ostream& out, const HighNumber& high)
 {
+    bool isZero = false;
+    if (high.FU_SHU)
+    {
+        out << '-';
+    }
     for (int i = high.count - 1; i >= 0; i--)
     {
-        out << high.big[i];
+        if (high.big[i] != 0 || isZero)
+        {
+            out << high.big[i];
+            isZero = true;
+        }
     }
     return out;
 }

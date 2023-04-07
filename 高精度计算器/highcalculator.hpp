@@ -34,7 +34,7 @@ public:
 
     HighNumber getAnswer();
     HighNumber add();
-    // HighNumber sub();
+    HighNumber sub();
 };
 
 HighCalculator::~HighCalculator()
@@ -50,7 +50,7 @@ HighNumber HighCalculator::getAnswer()
     }
     else if (this->oper == '-')
     {
-        // this->calculateAnswer = this->sub();
+        this->calculateAnswer = this->sub();
     }
 
     return calculateAnswer;
@@ -61,9 +61,9 @@ HighNumber HighCalculator::add()
     return number_1 + number_2;
 }
 
-// HighNumber HighCalculator::sub()
-// {
-//     return number_1 - number_2;
-// }
+HighNumber HighCalculator::sub()
+{
+    return number_1 - number_2;
+}
 
 #endif // _HIGHCALCULATOR_HPP
