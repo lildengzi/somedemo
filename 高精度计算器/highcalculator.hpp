@@ -20,7 +20,7 @@
 class HighCalculator
 {
 private:
-    HighNumber number_1;///< 大数
+    HighNumber number_1;
     HighNumber number_2;
     HighNumber calculateAnswer;
     char oper;
@@ -33,8 +33,8 @@ public:
     ~HighCalculator();
 
     HighNumber getAnswer();
-    HighNumber add();
-    HighNumber sub();
+    HighNumber addBigData();
+    HighNumber  minusBigData();
 };
 
 HighCalculator::~HighCalculator()
@@ -46,22 +46,22 @@ HighNumber HighCalculator::getAnswer()
 {
     if (this->oper == '+')
     {
-        this->calculateAnswer = this->add();
+        this->calculateAnswer = this->addBigData();
     }
     else if (this->oper == '-')
     {
-        this->calculateAnswer = this->sub();
+        this->calculateAnswer = this->minusBigData();
     }
 
     return calculateAnswer;
 }
 
-HighNumber HighCalculator::add()
+HighNumber HighCalculator::addBigData()
 {
     return number_1 + number_2;
 }
 
-HighNumber HighCalculator::sub()
+HighNumber HighCalculator::minusBigData()
 {
     return number_1 - number_2;
 }

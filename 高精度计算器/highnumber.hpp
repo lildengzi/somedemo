@@ -58,7 +58,6 @@ public:
             this->big[j] = this->number[i] - '0';
             count++;
         }
-
         return *this;
     }
 
@@ -125,6 +124,12 @@ std::ostream& operator<<(std::ostream& out, const HighNumber& high)
     {
         out << '-';
     }
+
+    if (high.big[0] == 0)
+    {
+        out << "0";
+    }
+
     for (int i = high.count - 1; i >= 0; i--)
     {
         if (high.big[i] != 0 || isZero)

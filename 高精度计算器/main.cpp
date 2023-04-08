@@ -28,20 +28,7 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
-    while(1)
-    {
-        string num_1, num_2;
-        char option;
-
-        cout << "输入你的计算表达式" << endl;
-        cout << "(提示,计算表达式: calculate 数字1 符号 数字2)" << endl;
-        cin >> num_1 >> num_2 >> option;
-
-        HighCalculator h1(num_1, num_2, option);
-        cout << h1.getAnswer() << endl;
-        system("pause");
-        system("cls");
-    }
-
+    HighCalculator h1(argv[1], argv[3], *argv[2]);
+    cout << h1.getAnswer() << endl;
     return 0;
 }
